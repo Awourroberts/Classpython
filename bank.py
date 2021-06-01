@@ -24,19 +24,19 @@ class Bank_account :
                 "narration":"you deposited"
             }
             self.statement.append(transaction)
-        return self.show_balance
+       
     def withdraw(self,amount):
         if amount>self.balance:    
             return f" your balance is {self.balance} you cannot withdraw {amount}"
         else:
-            self.balance-=amount
-            now=datetime.now() 
-            withdrawal={
+                self.balance-=amount
+                now=datetime.now() 
+                withdrawal={
                     "amount":amount,
                     "time":now,
-                    "narration":"you deposited"
-            }  
-            self.statement.append(withdrawal)   
+                    "narration":"you withdrew"
+            }
+                self.statement.append(withdrawal)   
         return self.show_balance()    
 
     def borrow_loan(self,amount):
@@ -57,4 +57,4 @@ class Bank_account :
 
 
 
-             
+            
